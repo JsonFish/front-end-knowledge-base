@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/knowledgeBase-vitepress/',
+  // base: '/knowledgeBase-vitepress/',
   head: [["link", { rel: "icon", href: "../public/logo.svg" }]], // 
   title: "Json Yu个人知识库",
   description: "Personal knowledge base",
@@ -62,6 +62,7 @@ export default defineConfig({
       }
     ],
     footer: {
+      message: "Json Yu个人知识库",
       copyright: "© 豫IP备2024057248号"
     }
   }
