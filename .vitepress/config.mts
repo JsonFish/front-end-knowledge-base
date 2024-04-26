@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/knowledgeBase-vitepress/',
-  head: [["link", { rel: "icon", href: "../public/logo.svg" }]], // 
+  // base: '/knowledgeBase-vitepress/',
+  head: [["link", { rel: "icon", href: "/public/logo.svg" }]], // 
   title: "Json Yu个人知识库",
   description: "Personal knowledge base",
   themeConfig: {
