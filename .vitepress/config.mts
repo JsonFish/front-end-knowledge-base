@@ -1,12 +1,12 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/knowledgeBase/',
+  // base: '/knowledgeBase-vitepress/',
   head: [["link", { rel: "icon", href: "/logo.svg" }]], // 
   title: "Json Yu个人知识库",
   description: "Personal knowledge base",
   themeConfig: {
-    logo: '/logo.svg',
+    logo: '/logo.svg',  // 左上角logo
     outlineTitle: "目录", // 右侧导航栏顶部显示内容
     outline: [2, 6], // 右侧导航栏默认是md的文件一二级标题，加上这个可以显示最多显示6级标题
     // https://vitepress.dev/reference/default-theme-config
