@@ -1,12 +1,12 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // base: '/knowledgeBase-vitepress/',
+  base: '/knowledgeBase/',
   head: [["link", { rel: "icon", href: "/public/logo.svg" }]], // 
   title: "Json Yu个人知识库",
   description: "Personal knowledge base",
   themeConfig: {
-    logo: '/public/logo.svg',
+    logo: '/logo.svg',
     outlineTitle: "目录", // 右侧导航栏顶部显示内容
     outline: [2, 6], // 右侧导航栏默认是md的文件一二级标题，加上这个可以显示最多显示6级标题
     // https://vitepress.dev/reference/default-theme-config
@@ -48,7 +48,7 @@ export default defineConfig({
         items: [
           { text: 'Markdown 示例1', link: '/react/markdown-examples' },
           { text: 'API 示例1', link: '/react/api-examples' },
-          {text: 'index', link: '/react/index.md'}
+          { text: 'index', link: '/react/index.md' }
         ]
       }
     ],
