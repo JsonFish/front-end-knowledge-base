@@ -56,6 +56,12 @@ export default defineConfig({
         items: [
           { text: 'fs文件读取', link: '/node/node.md' },
         ]
+      },
+      {
+        text: 'TypeScript',
+        items: [
+          { text: 'ts基础', link: '/typescript/index.md' },
+        ]
       }
     ],
 
