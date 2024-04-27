@@ -50,6 +50,12 @@ export default defineConfig({
           { text: 'API 示例1', link: '/react/api-examples' },
           { text: 'index', link: '/react/index.md' }
         ]
+      },
+      {
+        text: 'Node',
+        items: [
+          { text: 'fs文件读取', link: '/node/node.md' },
+        ]
       }
     ],
 
