@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Json Yu"
-  text: "个人知识库"
+  text: "前端知识库"
   tagline: 我是真菜，只能多写多记
   image:
     src: /background.svg
