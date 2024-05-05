@@ -1,2 +1,2 @@
-# knowledgeBase-vitepress
-基于vitepress构建个人知识库
+## 基于vitepress构建的个人知识库
+主要分享一些关于前端的知识总结，面试八股文，真实面试题等等，持续更新，如果对你有帮助，期待你的 star ！
