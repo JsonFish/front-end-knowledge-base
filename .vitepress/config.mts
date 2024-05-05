@@ -2,15 +2,16 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   // base: '/knowledgeBase-vitepress/',
-  // lang: 'en-US',
   head: [["link", { rel: "icon", href: "/logo.svg" }]], // 
   title: "Json Yu前端知识库",
   description: "Personal knowledge base",
   themeConfig: {
+    // https://vitepress.dev/reference/default-theme-config
+    siteTitle: '前端知识库', // 左上角标题
     logo: '/logo.svg',  // 左上角logo
     outlineTitle: "目录", // 右侧导航栏顶部显示内容
     outline: [2, 6], // 右侧导航栏默认是md的文件一二级标题，加上这个可以显示最多显示6级标题
-    // https://vitepress.dev/reference/default-theme-config
+
     // 设置搜索框的样式
     search: {
       provider: "local",
@@ -33,40 +34,63 @@ export default defineConfig({
     },
 
     nav: [
-      { text: 'home', link: '/' },
-      { text: 'Vue', link: '/vue/index' },
-      { text: 'React', link: '/react/index' }
+      { text: '知识库', link: '/knowledge/vue/index' },
+      { text: '面试八股文', link: '/interview/html' },
+      { text: '面试实录', link: '/experience/mucang' }
     ],
 
-    sidebar: [
-      {
-        text: 'Vue',
-        items: [
-          { text: 'Vue是什么', link: '/vue/index' },
-          { text: 'Vue-Router', link: '/vue/vue-router' }
-        ]
-      },
-      {
-        text: 'React',
-        items: [
-          { text: 'Markdown 示例1', link: '/react/markdown-examples' },
-          { text: 'API 示例1', link: '/react/api-examples' },
-          { text: 'index', link: '/react/index.md' }
-        ]
-      },
-      {
-        text: 'Node',
-        items: [
-          { text: 'fs文件读取', link: '/node/node.md' },
-        ]
-      },
-      {
-        text: 'TypeScript',
-        items: [
-          { text: 'ts基础', link: '/typescript/index.md' },
-        ]
-      }
-    ],
+    sidebar: {
+      '/knowledge/': [
+        {
+          text: 'TypeScript',
+          items: [
+            { text: 'TS基础', link: '/knowledge/typescript/index' }
+          ]
+        },
+        {
+          text: 'Vue',
+          collapsed: false,
+          items: [
+            { text: 'Index', link: '/knowledge/vue/index' },
+            { text: 'Vue-Router', link: '/knowledge/vue/vue-router' },
+          ]
+        },
+        {
+          text: 'React',
+          items: [
+            { text: 'api', link: '/knowledge/react/api-examples' },
+            { text: 'markdown', link: '/knowledge/react/markdown-examples' },
+          ]
+        },
+        {
+          text: 'Node',
+          items: [
+            { text: 'fs文件读写', link: '/knowledge/node/node' }
+          ]
+        },
+
+      ],
+      '/interview/': [
+        {
+          text: '面试八股文',
+          items: [
+            { text: 'HTML', link: '/interview/html' },
+            { text: 'JavaScript', link: '/interview/javascript' },
+          ]
+        }
+      ],
+      '/experience/':[
+        { text: '4.2 趣链科技', link: '/experience/qulian' },
+        { text: '4.18 木仓科技', link: '/experience/mucang' },
+        // {
+        //   // text: '前端面经',
+        //   items: [
+            
+        //   ]
+        // }
+      ]
+    },
+
 
     socialLinks: [
       // 博客
