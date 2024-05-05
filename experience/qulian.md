@@ -1,0 +1,24 @@
+## 4.2 趣链科技 武汉 前端实习生 1h
+- css盒模型
+- 外边距重叠 元素塌陷
+- poisition 定位
+- 浏览器存储 cookie webstorage
+- localstorage 用法
+- cookie localstorage 区别
+- transition过渡 animation动画
+- 实现垂直居中一个盒子  
+- 实现 0.5px 的线
+- css旋转 缩放
+- es6 新增特性
+- 数组es6增加哪些方法
+- promise理解
+- 项目中用到过吗(promise)
+- promise.all() promise.race()
+- 遍历对象方法
+- 原型链
+- 手写ajax请求
+- axios 底层原理
+- 判断"hello word" 是否包含 hello
+- Object.keys()  Object.value()
+- 算法 [1,2,3] 变成 [1,2,4,3]
+- 项目中的技术点...
