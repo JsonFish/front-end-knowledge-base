@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // base: '/front-end-knowledge-base/',
+  base: '/front-end-knowledge-base/',
   head: [["link", { rel: "icon", href: "/logo.svg" }]], // 
   title: "Json Yu前端知识库",
   description: "Personal knowledge base",
@@ -19,8 +19,8 @@ export default defineConfig({
       },
     },
     docFooter: {
-      prev: '< 上一篇',
-      next: '下一篇 >'
+      prev: '⏪ 上一页',
+      next: '下一页 ⏩'
     },
     // 设置搜索框的样式
     search: {
