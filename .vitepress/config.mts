@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/front-end-knowledge-base/',
+  // base: '/front-end-knowledge-base/',
   head: [["link", { rel: "icon", href: "/logo.svg" }]], // 
   title: "Json Yu前端知识库",
   description: "Personal knowledge base",
@@ -11,7 +11,17 @@ export default defineConfig({
     logo: '/logo.svg',  // 左上角logo
     outlineTitle: "目录", // 右侧导航栏顶部显示内容
     outline: [2, 6], // 右侧导航栏默认是md的文件一二级标题，加上这个可以显示最多显示6级标题
-
+    lastUpdated: {
+      text: '最近更新于',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'short'
+      },
+    },
+    docFooter: {
+      prev: '< 上一篇',
+      next: '下一篇 >'
+    },
     // 设置搜索框的样式
     search: {
       provider: "local",
@@ -36,7 +46,7 @@ export default defineConfig({
     nav: [
       { text: '知识库', link: '/knowledge/vue/index' },
       { text: '面试八股文', link: '/interview/html' },
-      { text: '面试实录', link: '/experience/mucang' }
+      { text: '面经', link: '/experience/qulian' }
     ],
 
     sidebar: {
@@ -68,26 +78,32 @@ export default defineConfig({
             { text: 'fs文件读写', link: '/knowledge/node/node' }
           ]
         },
+        {
+          text: '计算机网络',
+          items: [
+            { text: '网络基础', link: '/knowledge/network/index' }
+          ]
+        },
 
       ],
       '/interview/': [
         {
           text: '面试八股文',
           items: [
-            { text: 'HTML', link: '/interview/html' },
+            { text: 'Html', link: '/interview/html' },
             { text: 'JavaScript', link: '/interview/javascript' },
+            { text: 'Node', link: '/interview/node' },
           ]
         }
       ],
-      '/experience/':[
-        { text: '4.2 趣链科技', link: '/experience/qulian' },
-        { text: '4.18 木仓科技', link: '/experience/mucang' },
-        // {
-        //   // text: '前端面经',
-        //   items: [
-            
-        //   ]
-        // }
+      '/experience/': [
+        {
+          text: '面经',
+          items: [
+            { text: '4.2 趣链科技', link: '/experience/qulian' },
+            { text: '4.18 木仓科技', link: '/experience/mucang' },
+          ]
+        }
       ]
     },
 
@@ -118,7 +134,7 @@ export default defineConfig({
         }, link: "https://gitee.com/yu021214"
       },
       // GitHub
-      { icon: 'github', link: 'https://github.com/jsonfish' },
+      { icon: 'github', link: 'https://github.com/JsonFish/front-end-knowledge-base' },
     ],
 
     footer: {
