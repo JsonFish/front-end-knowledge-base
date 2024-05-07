@@ -1,10 +1,10 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/front-end-knowledge-base/',
+  // base: '/front-end-knowledge-base/',
   head: [["link", { rel: "icon", href: "/logo.svg" }]], // 
   title: "Json Yu前端知识库",
-  description: "Personal knowledge base",
+  description: "个人知识库",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     siteTitle: 'Json Yu 前端知识库', // 左上角标题
@@ -42,29 +42,62 @@ export default defineConfig({
         },
       },
     },
-
+    // 导航栏
     nav: [
-      { text: '知识库', link: '/knowledge/vue/index' },
-      { text: '面试八股文', link: '/interview/html' },
-      { text: '面经', link: '/experience/qulian' }
+      {
+        text: '知识库',
+        items: [
+          { text: 'HTML CSS', link: '/knowledge/htmlcss/html' },
+          { text: 'JavaScript', link: '/knowledge/javascript/index' },
+          { text: 'TypeScript', link: '/knowledge/typescript/index' },
+          { text: 'Vue', link: '/knowledge/vue/index' },
+          { text: 'React', link: '/knowledge/react/api-examples' },
+          { text: 'Node', link: '/knowledge/node/index' },
+        ]
+      },
+      { text: '面试八股文', link: '/interview/html5.md' },
+      { text: '面经', link: '/experience/qulian' },
     ],
 
+    // 侧边栏
     sidebar: {
-      '/knowledge/': [
+      '/knowledge/htmlcss': [
         {
-          text: 'TypeScript',
-          items: [
-            { text: 'TS基础', link: '/knowledge/typescript/index' }
-          ]
-        },
-        {
-          text: 'Vue',
+          text: 'HTML',
           collapsed: false,
           items: [
-            { text: 'Index', link: '/knowledge/vue/index' },
-            { text: 'Vue-Router', link: '/knowledge/vue/vue-router' },
+            { text: 'html', link: '/knowledge/htmlcss/html' },
+            { text: 'html5', link: '/knowledge/htmlcss/html5' },
+
           ]
         },
+        {
+          text: 'CSS',
+          items: [
+            { text: 'css', link: '/knowledge/htmlcss/css' },
+            { text: 'css3', link: '/knowledge/htmlcss/css3' }
+          ]
+        }
+      ],
+      '/knowledge/javascript': [
+        {
+          text: 'JavaScript',
+          items: [
+            { text: 'JS基础', link: '/interview/javascript/index' },
+            // { text: 'JS高级', link: '/interview/javascript/advanced' },
+          ]
+        }
+      ],
+      '/knowledge/vue': [
+        {
+          text: 'Vue',
+          items: [
+            { text: 'vue基础', link: '/knowledge/vue/index' },
+            { text: 'Vue-Router基础知识', link: '/knowledge/vue/vue-router' },
+          ]
+        },
+      ],
+      '/knowledge/react': [
         {
           text: 'React',
           items: [
@@ -72,30 +105,45 @@ export default defineConfig({
             { text: 'markdown', link: '/knowledge/react/markdown-examples' },
           ]
         },
+      ],
+      '/knowledge/typescript': [
+        {
+          text: 'TypeScript',
+          items: [
+            { text: 'TS数据基础类型', link: '/knowledge/typescript/index' },
+          ]
+        },
+      ],
+      '/knowledge/node': [
         {
           text: 'Node',
           items: [
-            { text: 'fs文件读写', link: '/knowledge/node/node' }
+            { text: 'node基础', link: '/knowledge/node/index' },
+            { text: 'node进阶', link: '/knowledge/node/index' },
           ]
         },
+      ],
+      '/knowledge/network': [
         {
           text: '计算机网络',
           items: [
-            { text: '网络基础', link: '/knowledge/network/index' }
+            { text: '网络基础', link: '/knowledge/network/index' },
           ]
         },
-
       ],
-      '/interview/': [
+      '/interview': [
         {
-          text: '面试八股文',
+          text: '前端八股文',
           items: [
-            { text: 'Html', link: '/interview/html' },
-            { text: 'JavaScript', link: '/interview/javascript' },
+            { text: 'HTML5', link: '/interview/html5' },
+            { text: 'CSS3', link: '/interview/css3' },
+            { text: 'Javascript', link: '/interview/javascript' },
+            { text: 'Vue', link: '/interview/vue' },
             { text: 'Node', link: '/interview/node' },
           ]
         }
       ],
+      // 面经
       '/experience/': [
         {
           text: '面经',
@@ -104,10 +152,10 @@ export default defineConfig({
             { text: '4.18 木仓科技', link: '/experience/mucang' },
           ]
         }
-      ]
+      ],
     },
 
-
+    // 第三方网站链接
     socialLinks: [
       // 博客
       {
