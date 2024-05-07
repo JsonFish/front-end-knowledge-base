@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 开始学习！！！
-      link: /knowledge/vue/index.md
+      link: /knowledge/htmlcss/html
     - theme: alt
       text: 我的个人博客
       link: http://jsonblog.top
