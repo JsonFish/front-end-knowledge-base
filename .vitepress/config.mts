@@ -2,7 +2,9 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/front-end-knowledge-base',
-  head: [["link", { rel: "icon", href: "/logo.svg" }]], // 
+  head: [
+    ["link", { rel: "icon", href: "/logo.svg" }],
+  ],
   title: "Json Yu前端知识库",
   description: "个人知识库",
   themeConfig: {
@@ -83,8 +85,8 @@ export default defineConfig({
         {
           text: 'JavaScript',
           items: [
-            { text: 'JS基础', link: '/interview/javascript/index' },
-            // { text: 'JS高级', link: '/interview/javascript/advanced' },
+            { text: 'JS基础', link: '/knowledge/javascript/index' },
+            { text: 'ES6', link: '/knowledge/javascript/es6' },
           ]
         }
       ],
